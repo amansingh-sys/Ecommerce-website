@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products — PremiumStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="announcement">✨ The little things, made better. Free shipping on orders over ₹2,999</div>
+    <header class="navbar"><a class="brand" href="index.html">premium<span>store.</span></a>
+        <nav id="navMenu"><a href="index.html">Home</a><a href="products.html" aria-current="page">Products</a><a
+                href="categories.html">Categories</a><a href="index.html#footer">Our story</a></nav>
+        <div class="nav-actions"><a class="icon-btn" href="login.html" aria-label="Login"><i
+                    class="fa-regular fa-user"></i><span class="login-label">Sign in</span></a><a class="icon-btn"
+                href="wishlist.html" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><b
+                    id="wishCount">0</b></a><a class="icon-btn" href="cart.html" aria-label="Shopping cart"><i
+                    class="fa-solid fa-bag-shopping"></i><b id="cartCount">0</b></a><button class="icon-btn menu-toggle"
+                id="menuToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button></div>
+    </header>
+    <main class="standalone-main">
+        <section class="page-hero"><span class="eyebrow">THE PREMIUMSTORE EDIT</span>
+            <h1>Find your next<br><em>favourite.</em></h1>
+            <p>Explore the complete collection of thoughtful everyday essentials, picked to make life feel a little
+                better.</p>
+        </section>
+        <section class="section products-section" id="products">
+            <div class="section-head">
+                <div><span class="eyebrow">THE FULL COLLECTION</span>
+                    <h2>All products</h2>
+                </div>
+                <div class="product-tools"><label class="searchbox"><i class="fa-solid fa-magnifying-glass"></i><input
+                            id="searchInput" type="search" placeholder="Search products"
+                            aria-label="Search products"></label><select id="sortSelect" aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="low">Price: low to high</option>
+                        <option value="high">Price: high to low</option>
+                        <option value="rating">Top rated</option>
+                    </select></div>
+            </div>
+            <div class="filter-row" id="filterRow"><button class="filter-chip selected" data-category="All">All
+                    products</button><button class="filter-chip" data-category="Electronics">Electronics</button><button
+                    class="filter-chip" data-category="Fashion">Fashion</button><button class="filter-chip"
+                    data-category="Lifestyle">Lifestyle</button><button class="filter-chip"
+                    data-category="Sports">Sports</button></div>
+            <div class="products-grid" id="productGrid"></div>
+            <p class="empty-state" id="noProducts" hidden>No products found. Try another search.</p>
+        </section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="index.html">premium<span>store.</span></a>
+        <p>Everyday essentials. A little more considered.</p><small>© 2026 PremiumStore · Built with care</small>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

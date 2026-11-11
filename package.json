@@ -1,0 +1,12 @@
+{
+  "name": "premiumstore-fullstack",
+  "version": "2.0.0",
+  "private": true,
+  "description": "PremiumStore full-stack e-commerce application",
+  "scripts": {
+    "install:backend": "npm install --prefix backend",
+    "dev": "npm run dev --prefix backend",
+    "start": "npm start --prefix backend",
+    "create-admin": "npm run create-admin --prefix backend --"
+  }
+}

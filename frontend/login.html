@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in — PremiumStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="announcement">✨ The little things, made better. Free shipping on orders over ₹2,999</div>
+    <header class="navbar"><a class="brand" href="index.html">premium<span>store.</span></a>
+        <nav id="navMenu"><a href="index.html">Home</a><a href="products.html">Products</a><a
+                href="categories.html">Categories</a><a href="index.html#footer">Our story</a></nav>
+        <div class="nav-actions"><a class="icon-btn" href="login.html" aria-label="Login"><i
+                    class="fa-regular fa-user"></i><span class="login-label">Sign in</span></a><a class="icon-btn"
+                href="wishlist.html" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><b
+                    id="wishCount">0</b></a><a class="icon-btn" href="cart.html" aria-label="Shopping cart"><i
+                    class="fa-solid fa-bag-shopping"></i><b id="cartCount">0</b></a><button class="icon-btn menu-toggle"
+                id="menuToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button></div>
+    </header>
+    <main class="standalone-main">
+        <section class="login-page">
+            <div class="login-story"><span class="eyebrow">A BETTER KIND OF SHOPPING</span>
+                <h1>Welcome to<br><em>your happy place.</em></h1>
+                <p>Thoughtfully picked essentials, little upgrades and the things you'll love using every day.</p>
+                <div class="login-perks"><span><i class="fa-solid fa-heart"></i> Save your favourites</span><span><i
+                            class="fa-solid fa-bag-shopping"></i> Keep your bag close</span><span><i
+                            class="fa-solid fa-truck-fast"></i> Easy delivery experience</span></div>
+                <div class="login-decor">premium<span>store.</span></div>
+            </div>
+            <div class="login-panel"><span class="eyebrow">YOUR ACCOUNT</span>
+                <h2 id="authTitle">Welcome back</h2>
+                <p id="authSubtitle">Sign in to save your favourites.</p>
+                <form id="authForm" class="auth-page-form"><label id="nameWrap" hidden>Full name<input id="authName"
+                            autocomplete="name" placeholder="Your name"></label><label>Email address<input type="email"
+                            id="authEmail" required autocomplete="email"
+                            placeholder="you@example.com"></label><label>Password<input type="password"
+                            id="authPassword" required minlength="8" autocomplete="current-password"
+                            placeholder="At least 8 characters"></label><button class="primary-btn full"
+                        id="authSubmit">Sign in <i class="fa-solid fa-arrow-right"></i></button></form>
+                <p class="auth-switch"><span id="switchText">New around here?</span> <button id="switchAuth"
+                        type="button">Create an account</button></p>
+                <div id="loginSuccess" class="login-success" aria-live="polite"></div><small class="demo-note">Your account is securely stored in the PremiumStore database.</small>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="index.html">premium<span>store.</span></a>
+        <p>Everyday essentials. A little more considered.</p><small>© 2026 PremiumStore · Built with care</small>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

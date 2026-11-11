@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop by category — PremiumStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="announcement">✨ The little things, made better. Free shipping on orders over ₹2,999</div>
+    <header class="navbar"><a class="brand" href="index.html">premium<span>store.</span></a>
+        <nav id="navMenu"><a href="index.html">Home</a><a href="products.html">Products</a><a
+                href="categories.html">Categories</a><a href="index.html#footer">Our story</a></nav>
+        <div class="nav-actions"><a class="icon-btn" href="login.html" aria-label="Login"><i
+                    class="fa-regular fa-user"></i><span class="login-label">Sign in</span></a><a class="icon-btn"
+                href="wishlist.html" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><b
+                    id="wishCount">0</b></a><a class="icon-btn" href="cart.html" aria-label="Shopping cart"><i
+                    class="fa-solid fa-bag-shopping"></i><b id="cartCount">0</b></a><button class="icon-btn menu-toggle"
+                id="menuToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button></div>
+    </header>
+    <main class="standalone-main">
+        <section class="page-hero"><span class="eyebrow">FIND YOUR THING</span>
+            <h1>Made for your<br><em>everyday.</em></h1>
+            <p>Explore thoughtful collections designed for the way you live, work and play.</p><a href="products.html"
+                class="primary-btn">Shop all products <i class="fa-solid fa-arrow-right"></i></a>
+        </section>
+        <section class="page-section">
+            <div class="page-section-heading">
+                <div><span class="eyebrow">FOUR WAYS TO FIND YOUR FAVOURITE</span>
+                    <h2>Explore collections</h2>
+                </div>
+                <p>Choose a category and find your next everyday essential.</p>
+            </div>
+            <div class="category-page-grid" id="categoryPageGrid"></div>
+        </section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="index.html">premium<span>store.</span></a>
+        <p>Everyday essentials. A little more considered.</p><small>© 2026 PremiumStore · Built with care</small>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

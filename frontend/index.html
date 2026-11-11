@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PremiumStore — Shop the good stuff</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="announcement">✨ The little things, made better. Free shipping on orders over ₹2,999</div>
+    <header class="navbar"><a class="brand" href="#home">premium<span>store.</span></a>
+        <nav id="navMenu"><a href="index.html">Home</a><a href="products.html">Products</a><a
+                href="categories.html">Categories</a><a href="#footer">Our story</a></nav>
+        <div class="nav-actions"><a class="icon-btn" href="login.html" aria-label="Login"><i
+                    class="fa-regular fa-user"></i><span class="login-label">Sign in</span></a><a class="icon-btn"
+                href="wishlist.html" id="wishOpen" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><b
+                    id="wishCount">0</b></a><a class="icon-btn" href="cart.html" id="cartOpen"
+                aria-label="Shopping cart"><i class="fa-solid fa-bag-shopping"></i><b id="cartCount">0</b></a><button
+                class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+    <main id="home">
+        <section class="hero">
+            <div class="hero-copy"><span class="eyebrow">THE EVERYDAY EDIT · 2026</span>
+                <h1>Good finds.<br><em>Great feeling.</em></h1>
+                <p>Thoughtful essentials for the way you live, work and play.</p><a class="primary-btn"
+                    href="products.html">Explore collection <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="hero-note"><span>★★★★★</span> Loved by 12,000+ happy shoppers</div>
+            </div>
+            <div class="hero-art">
+                <div class="hero-orb"></div><img src="images/shoes.jpg" alt="Featured sneakers">
+                <div class="floating-tag"><small>THE WEEKEND PICK</small><strong>Everyday sneakers</strong><span>From
+                        ₹4,999</span></div>
+            </div>
+        </section>
+        <div class="trust-strip"><span><i class="fa-solid fa-truck-fast"></i> Free shipping over ₹2,999</span><span><i
+                    class="fa-solid fa-arrow-rotate-left"></i> Easy 7-day returns</span><span><i
+                    class="fa-solid fa-shield-halved"></i> Secure order placement</span></div>
+        <section class="section" id="categories">
+            <div class="section-head">
+                <div><span class="eyebrow">FIND YOUR THING</span>
+                    <h2>Shop by category</h2>
+                </div>
+                <p>A little something for every side of you.</p>
+            </div>
+            <div class="category-grid"><button class="category-tile active"
+                    data-category="All"><span>✳</span><strong>Everything</strong><small>All the good
+                        stuff</small></button><button class="category-tile"
+                    data-category="Electronics"><span>⌁</span><strong>Tech & audio</strong><small>Smart daily
+                        upgrades</small></button><button class="category-tile"
+                    data-category="Fashion"><span>◈</span><strong>Style</strong><small>Wear it your
+                        way</small></button><button class="category-tile"
+                    data-category="Lifestyle"><span>☼</span><strong>Everyday living</strong><small>Little life
+                        upgrades</small></button><button class="category-tile"
+                    data-category="Sports"><span>↗</span><strong>Move</strong><small>Made to get moving</small></button>
+            </div>
+        </section>
+        <section class="section products-section" id="products">
+            <div class="section-head">
+                <div><span class="eyebrow">CURATED FOR YOU</span>
+                    <h2>Good things, picked</h2>
+                </div>
+                <div class="product-tools"><label class="searchbox"><i class="fa-solid fa-magnifying-glass"></i><input
+                            id="searchInput" type="search" placeholder="Find your next favourite"></label><select
+                        id="sortSelect" aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="low">Price: low to high</option>
+                        <option value="high">Price: high to low</option>
+                        <option value="rating">Top rated</option>
+                    </select></div>
+            </div>
+            <div class="filter-row" id="filterRow"><button class="filter-chip selected" data-category="All">All
+                    products</button><button class="filter-chip" data-category="Electronics">Electronics</button><button
+                    class="filter-chip" data-category="Fashion">Fashion</button><button class="filter-chip"
+                    data-category="Lifestyle">Lifestyle</button><button class="filter-chip"
+                    data-category="Sports">Sports</button></div>
+            <div class="products-grid" id="productGrid"></div>
+            <p class="empty-state" id="noProducts" hidden>No products found. Try another search.</p>
+        </section>
+        <section class="newsletter">
+            <div><span class="eyebrow">A GOOD EMAIL, ONCE IN A WHILE</span>
+                <h2>Good stuff in your inbox.</h2>
+                <p>New arrivals, thoughtful picks and the occasional little treat.</p>
+            </div>
+            <form id="newsletterForm"><input type="email" required placeholder="Your email address"
+                    aria-label="Your email address"><button class="primary-btn">Count me in <i
+                        class="fa-solid fa-arrow-right"></i></button></form>
+        </section>
+    </main>
+    <footer id="footer"><a class="brand" href="#home">premium<span>store.</span></a>
+        <p>Everyday essentials. A little more considered.</p><small>© 2026 PremiumStore · Built with care</small>
+    </footer>
+    <div class="overlay" id="overlay"></div>
+    <aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
+        <div class="drawer-head">
+            <div><span class="eyebrow">YOUR SELECTION</span>
+                <h2>Your bag <span id="cartHeadingCount">(0)</span></h2>
+            </div><button class="close-btn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-body" id="cartItems"></div>
+        <div class="drawer-foot">
+            <div class="subtotal"><span>Subtotal</span><strong id="cartTotal">₹0</strong></div><small>Shipping and taxes
+                calculated at checkout.</small><button class="primary-btn full" id="checkoutOpen">Continue to checkout
+                <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </aside>
+    <aside class="drawer" id="wishDrawer" aria-label="Wishlist">
+        <div class="drawer-head">
+            <div><span class="eyebrow">SAVED FOR LATER</span>
+                <h2>Your wishlist <span id="wishHeadingCount">(0)</span></h2>
+            </div><button class="close-btn" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-body" id="wishItems"></div>
+    </aside>
+    <div class="modal" id="productModal">
+        <div class="modal-card product-detail"><button class="close-btn modal-close" data-close aria-label="Close"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div id="productDetailContent"></div>
+        </div>
+    </div>
+    <div class="modal" id="loginModal">
+        <div class="modal-card auth-card"><button class="close-btn modal-close" data-close aria-label="Close"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div class="auth-visual"><span class="brand light">premium<span>store.</span></span>
+                <div><span class="eyebrow">A BETTER KIND OF SHOPPING</span>
+                    <h2>Welcome to<br>your happy place.</h2>
+                    <p>Find the things you'll love using every day.</p>
+                </div><small>Thoughtfully picked. Always.</small>
+            </div>
+            <div class="auth-form"><span class="eyebrow">YOUR ACCOUNT</span>
+                <h2 id="authTitle">Welcome back</h2>
+                <p id="authSubtitle">Sign in to save your favourites.</p>
+                <form id="authForm"><label id="nameWrap" hidden>Full name<input id="authName" autocomplete="name"
+                            placeholder="Your name"></label><label>Email address<input type="email" id="authEmail"
+                            required autocomplete="email" placeholder="you@example.com"></label><label>Password<input
+                            type="password" id="authPassword" required minlength="8" autocomplete="current-password"
+                            placeholder="At least 8 characters"></label><button class="primary-btn full"
+                        id="authSubmit">Sign in <i class="fa-solid fa-arrow-right"></i></button></form>
+                <p class="auth-switch"><span id="switchText">New around here?</span> <button id="switchAuth">Create an
+                        account</button></p><small class="demo-note">Your account is securely stored in the PremiumStore database.</small>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="checkoutModal">
+        <div class="modal-card checkout-card"><button class="close-btn modal-close" data-close aria-label="Close"><i
+                    class="fa-solid fa-xmark"></i></button><span class="eyebrow">ALMOST YOURS</span>
+            <h2>Delivery details</h2>
+            <p>Where should we send your good finds?</p>
+            <form id="checkoutForm" class="checkout-form"><label>Full name<input required name="name"
+                        autocomplete="name" placeholder="Name on the delivery"></label>
+                <div class="form-row"><label>Email<input type="email" required name="email" autocomplete="email"
+                            placeholder="you@example.com"></label><label>Phone number<input type="tel" required
+                            pattern="[0-9 +()-]{10,15}" name="phone" autocomplete="tel"
+                            placeholder="+91 98765 43210"></label></div><label>Street address<input required
+                        name="address" autocomplete="street-address" placeholder="House no., street, area"></label>
+                <div class="form-row"><label>City<input required name="city" autocomplete="address-level2"
+                            placeholder="City"></label><label>PIN code<input required pattern="[0-9]{6}" name="pin"
+                            inputmode="numeric" autocomplete="postal-code" placeholder="6-digit PIN"></label></div>
+                <label>Payment method<select name="payment">
+                        <option>Cash on Delivery</option>
+                    </select></label>
+                <div class="checkout-total"><span>Order total</span><strong id="checkoutTotal">₹0</strong></div><button
+                    class="primary-btn full">Place order <i class="fa-solid fa-arrow-right"></i></button><small
+                    class="demo-note">Cash on Delivery is the only available payment method.</small>
+            </form>
+        </div>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

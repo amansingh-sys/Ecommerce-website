@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist — PremiumStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="announcement">✨ The little things, made better. Free shipping on orders over ₹2,999</div>
+    <header class="navbar"><a class="brand" href="index.html">premium<span>store.</span></a>
+        <nav id="navMenu"><a href="index.html">Home</a><a href="products.html">Products</a><a
+                href="categories.html">Categories</a><a href="index.html#footer">Our story</a></nav>
+        <div class="nav-actions"><a class="icon-btn" href="login.html" aria-label="Login"><i
+                    class="fa-regular fa-user"></i><span class="login-label">Sign in</span></a><a class="icon-btn"
+                href="wishlist.html" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><b
+                    id="wishCount">0</b></a><a class="icon-btn" href="cart.html" aria-label="Shopping cart"><i
+                    class="fa-solid fa-bag-shopping"></i><b id="cartCount">0</b></a><button class="icon-btn menu-toggle"
+                id="menuToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button></div>
+    </header>
+    <main class="standalone-main">
+        <section class="page-section wishlist-page">
+            <div class="breadcrumb"><a href="index.html">Home</a> / Wishlist</div>
+            <div class="page-section-heading">
+                <div><span class="eyebrow">SAVED FOR LATER</span>
+                    <h1>Your wishlist</h1>
+                    <p class="page-lead">Keep the pieces you love all in one place.</p>
+                </div><a href="products.html" class="back-link">Discover more <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="wishlist-page-grid" id="wishlistPageItems"></div>
+        </section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="index.html">premium<span>store.</span></a>
+        <p>Everyday essentials. A little more considered.</p><small>© 2026 PremiumStore · Built with care</small>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

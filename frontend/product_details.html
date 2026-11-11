@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product details — PremiumStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="announcement">✨ The little things, made better. Free shipping on orders over ₹2,999</div>
+    <header class="navbar"><a class="brand" href="index.html">premium<span>store.</span></a>
+        <nav id="navMenu"><a href="index.html">Home</a><a href="products.html">Products</a><a
+                href="categories.html">Categories</a><a href="index.html#footer">Our story</a></nav>
+        <div class="nav-actions"><a class="icon-btn" href="login.html" aria-label="Login"><i
+                    class="fa-regular fa-user"></i><span class="login-label">Sign in</span></a><a class="icon-btn"
+                href="wishlist.html" aria-label="Wishlist"><i class="fa-regular fa-heart"></i><b
+                    id="wishCount">0</b></a><a class="icon-btn" href="cart.html" aria-label="Shopping cart"><i
+                    class="fa-solid fa-bag-shopping"></i><b id="cartCount">0</b></a><button class="icon-btn menu-toggle"
+                id="menuToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button></div>
+    </header>
+    <main class="standalone-main">
+        <section class="page-section product-detail-shell">
+            <div class="breadcrumb"><a href="index.html">Home</a> / Product details</div>
+            <div id="standaloneProductDetail"></div>
+            <section class="detail-promise">
+                <div><i class="fa-solid fa-truck-fast"></i><strong>Free shipping</strong><span>On orders over
+                        ₹2,999</span></div>
+                <div><i class="fa-solid fa-arrow-rotate-left"></i><strong>Easy returns</strong><span>7-day return
+                        window</span></div>
+                <div><i class="fa-solid fa-shield-halved"></i><strong>Shop confidently</strong><span>Demo checkout
+                        experience</span></div>
+            </section>
+        </section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="index.html">premium<span>store.</span></a>
+        <p>Everyday essentials. A little more considered.</p><small>© 2026 PremiumStore · Built with care</small>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
